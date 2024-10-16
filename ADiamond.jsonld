@@ -1,0 +1,96 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP119": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0119/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP119:body",
+      "@context": {
+        "references": {
+          "@id": "CIP119:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Identity": "CIP119:IdentityReference",
+            "Link": "CIP119:LinkReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP119:referenceHash",
+              "@context": {
+                "hashDigest": "CIP119:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "paymentAddress": "CIP119:paymentAddress",
+        "givenName": "CIP119:givenName",
+        "image": "CIP119:image",
+        "objectives": "CIP119:objectives",
+        "motivations": "CIP119:motivations",
+        "qualifications": "CIP119:qualifications",
+        "doNotList": "CIP119:doNotList"
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "hashAlgorithm": {
+    "@value": "blake2b-256"
+  },
+  "body": {
+    "doNotList": false,
+    "givenName": {
+      "@value": "ADiamond"
+    },
+    "motivations": {
+      "@value": "I am actively developing tools for the SingularityNet Ambassador program and other Cardano communities. These tools, primarily Cardano dApps, leverage APIs and libraries created through funded Catalyst proposals."
+    },
+    "objectives": {
+      "@value": "I believe in supporting projects that enhance developer experience, drive Cardano adoption, and empower the creation of community tools. My goal as a DRep is to vote for initiatives that contribute to these areas, fostering a more robust and accessible ecosystem."
+    },
+    "paymentAddress": {
+      "@value": "addr1q9lvrl7rwv9ypn8zdm3yek525m03walucyysx6ghk3zn845rdcnj6lwu3zw854y76snq07kauuw4uj3s3hz2v6k4t5gq7zxn7j"
+    },
+    "qualifications": {
+      "@value": "Cardano Blockchain Certified Associate (CBCA) Alpha Program\n"
+    },
+    "references": [
+      {
+        "@type": "Link",
+        "label": {
+          "@value": "LinkedIn"
+        },
+        "uri": {
+          "@value": "https://www.linkedin.com/in/andr%C3%A9-diamond-45871242/"
+        }
+      },
+      {
+        "@type": "Identity",
+        "label": {
+          "@value": "LinkedIn"
+        },
+        "uri": {
+          "@value": "https://www.linkedin.com/in/andr%C3%A9-diamond-45871242/"
+        }
+      }
+    ]
+  }
+}
