@@ -61,10 +61,10 @@
       "@value": "ADiamond"
     },
     "motivations": {
-      "@value": "I am actively developing tools for the SingularityNet Ambassador program and other Cardano communities. These tools, primarily Cardano dApps, leverage APIs and libraries created through funded Catalyst proposals."
+      "@value": "I am actively developing tools for the SingularityNet Ambassador program and other Cardano communities."
     },
     "objectives": {
-      "@value": "I believe in supporting projects that enhance developer experience, drive Cardano adoption, and empower the creation of community tools. My goal as a DRep is to vote for initiatives that contribute to these areas, fostering a more robust and accessible ecosystem."
+      "@value": "As a DRep, I am committed to supporting proposals that enhance security, decentralization, governance, and scalability, ensuring a robust, sustainable, and healthy Cardano ecosystem."
     },
     "paymentAddress": {
       "@value": "addr1q9lvrl7rwv9ypn8zdm3yek525m03walucyysx6ghk3zn845rdcnj6lwu3zw854y76snq07kauuw4uj3s3hz2v6k4t5gq7zxn7j"
