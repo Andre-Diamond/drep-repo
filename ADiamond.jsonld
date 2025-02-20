@@ -51,45 +51,23 @@
       }
     }
   },
-  "authors": [],
-  "hashAlgorithm": {
-    "@value": "blake2b-256"
-  },
+  "hashAlgorithm": "blake2b-256",
   "body": {
-    "doNotList": false,
-    "givenName": {
-      "@value": "ADiamond"
-    },
-    "motivations": {
-      "@value": "I am actively developing tools for the SingularityNet Ambassador program and other Cardano communities."
-    },
-    "objectives": {
-      "@value": "As a DRep, I am committed to supporting proposals that enhance security, decentralization, governance, and scalability, ensuring a robust, sustainable, and healthy Cardano ecosystem."
-    },
-    "paymentAddress": {
-      "@value": "addr1q9lvrl7rwv9ypn8zdm3yek525m03walucyysx6ghk3zn845rdcnj6lwu3zw854y76snq07kauuw4uj3s3hz2v6k4t5gq7zxn7j"
-    },
-    "qualifications": {
-      "@value": "Cardano Blockchain Certified Associate (CBCA) Alpha Program\n"
-    },
+    "givenName": "A Diamond",
+    "motivations": "I am actively developing tools for the SingularityNet Ambassador program and other Cardano communities.",
+    "objectives": "As a DRep, I am committed to supporting proposals that enhance security, decentralization, governance, and scalability, ensuring a robust, sustainable, and healthy Cardano ecosystem.",
+    "paymentAddress": "addr1q9lvrl7rwv9ypn8zdm3yek525m03walucyysx6ghk3zn845rdcnj6lwu3zw854y76snq07kauuw4uj3s3hz2v6k4t5gq7zxn7j",
+    "qualifications": "Cardano Blockchain Certified Associate (CBCA) Alpha Program\n",
     "references": [
       {
         "@type": "Link",
-        "label": {
-          "@value": "LinkedIn"
-        },
-        "uri": {
-          "@value": "https://www.linkedin.com/in/andr%C3%A9-diamond-45871242/"
-        }
+        "label": "LinkedIn",
+        "uri": "https://www.linkedin.com/in/andr%C3%A9-diamond-45871242/"
       },
       {
         "@type": "Identity",
-        "label": {
-          "@value": "LinkedIn"
-        },
-        "uri": {
-          "@value": "https://www.linkedin.com/in/andr%C3%A9-diamond-45871242/"
-        }
+        "label": "LinkedIn",
+        "uri": "https://www.linkedin.com/in/andr%C3%A9-diamond-45871242/"
       }
     ]
   }
