@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP100:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "comment": "CIP100:comment",
+        "externalUpdates": {
+          "@id": "CIP100:externalUpdates",
+          "@context": {
+            "title": "CIP100:update-title",
+            "uri": "CIP100:uri"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "body": {
+    "comment": "The roadmap is compelling because it lays out a comprehensive strategy that addresses both technical innovation and ecosystem growth. By focusing on key areas such as scalability, security, and developer experience, the roadmap ensures that Cardano is well-positioned to handle increasing transaction volumes and evolving market demands. The emphasis on optimizing the L1 engine through innovations like the Leios protocol—along with robust improvements to L2 solutions such as Hydra and Midgard—demonstrates a clear commitment to enhancing network performance without compromising on decentralization. Additionally, the plan’s focus on formal methods, modular design, and diverse node implementations significantly boosts the platform’s reliability and resilience.\n\nThis forward-thinking approach not only encourages innovation within the Cardano community but also fosters strategic partnerships that are essential for real-world adoption. The roadmap's balance between technical advancements and community engagement creates a sustainable foundation for Cardano’s future.\n\n\n"
+  },
+  "hashAlgorithm": "blake2b-256"
+}
