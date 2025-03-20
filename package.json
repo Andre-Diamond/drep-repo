@@ -1,0 +1,10 @@
+{
+    "name": "drep-voting-action",
+    "version": "1.0.0",
+    "description": "Script to fetch DRep information using Koios API",
+    "main": "voting-action.js",
+    "dependencies": {
+        "axios": "^1.6.7",
+        "dotenv": "^16.4.7"
+    }
+}
