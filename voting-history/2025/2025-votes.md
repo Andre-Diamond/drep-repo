@@ -2,8 +2,8 @@
 
 | A Diamond      | Cardano Governance Actions                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Proposal Title | [Defining the Cardano Vision and Roadmap for 2025 and beyond](https://adastat.net/governances/56f39054758f1a3cedc1de9225d66bf270b62dfdbfbc5399f1d6d43aceffc636)                                                                                                   |
-| Hash           | 56f39054758f1a3cedc1de9225d66bf270b62dfdbfbc5399f1d6d43aceffc636                                                                      |
+| Proposal Title | [Defining the Cardano Vision and Roadmap for 2025 and beyond](https://adastat.net/governances/56f39054758f1a3cedc1de9225d66bf270b62dfdbfbc5399f1d6d43aceffc63600)                                                                                                   |
+| Hash           | 56f39054758f1a3cedc1de9225d66bf270b62dfdbfbc5399f1d6d43aceffc63600                                                                      |
 | Action ID      | gov_action12meeq4r43udremwpm6fzt4nt7fctvt0ah7798x036m2r4nhlccmqqhmr9wx                                                                  |
 | Type           | InfoAction                                                                                                                        |
 | Proposed Epoch | 542                                                                                                                              |
@@ -18,8 +18,8 @@
 
 | A Diamond      | Cardano Governance Actions                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Proposal Title | [Decrease Treasury Tax from 20% to 10%](https://adastat.net/governances/941502b0aa104c850d197923259444d2b57cab7af18b63143775465aaacc84f5)                                                                                                   |
-| Hash           | 941502b0aa104c850d197923259444d2b57cab7af18b63143775465aaacc84f5                                                                      |
+| Proposal Title | [Decrease Treasury Tax from 20% to 10%](https://adastat.net/governances/941502b0aa104c850d197923259444d2b57cab7af18b63143775465aaacc84f500)                                                                                                   |
+| Hash           | 941502b0aa104c850d197923259444d2b57cab7af18b63143775465aaacc84f500                                                                      |
 | Action ID      | gov_action1js2s9v92zpxg2rge0y3jt9zy626he2m67x9kx9phw4r942kvsn6sqfym0d7                                                                  |
 | Type           | ParameterChange                                                                                                                        |
 | Proposed Epoch | 539                                                                                                                              |
@@ -34,8 +34,8 @@
 
 | A Diamond      | Cardano Governance Actions                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Proposal Title | [Unknown Proposal](https://adastat.net/governances/8c653ee5c9800e6d31e79b5a7f7d4400c81d44717ad4db633dc18d4c07e4a4fd)                                                                                                   |
-| Hash           | 8c653ee5c9800e6d31e79b5a7f7d4400c81d44717ad4db633dc18d4c07e4a4fd                                                                      |
+| Proposal Title | [Unknown Proposal](https://adastat.net/governances/8c653ee5c9800e6d31e79b5a7f7d4400c81d44717ad4db633dc18d4c07e4a4fd00)                                                                                                   |
+| Hash           | 8c653ee5c9800e6d31e79b5a7f7d4400c81d44717ad4db633dc18d4c07e4a4fd00                                                                      |
 | Action ID      | gov_action133jnaewfsq8x6v08ndd87l2yqryp63r30t2dkceacxx5cply5n7sqzlcyqf                                                                  |
 | Type           | NewConstitution                                                                                                                        |
 | Proposed Epoch | 537                                                                                                                              |
