@@ -99,9 +99,9 @@ function generateVoteTable(vote, proposalDetails, metadata) {
     rationale = rationale.replace(/\n/g, ' ');
     rationale = rationale.replace(/\s+/g, ' ');
     rationale = rationale.replace(/\|/g, '\\|');
-    if (rationale.length > 500) {
+    /*if (rationale.length > 500) {
         rationale = rationale.substring(0, 497) + '...';
-    }
+    }*/
 
     return `| ${organizationName}      | Cardano Governance Actions                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
