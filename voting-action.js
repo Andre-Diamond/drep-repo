@@ -75,7 +75,8 @@ async function getProposalDetails(drepId) {
     }
 }
 
-function generateMarkdown(vote, proposalDetails, metadata) {
+// Function to generate a single vote table
+function generateVoteTable(vote, proposalDetails, metadata) {
     const voteEmoji = vote.vote === 'Yes' ? '✅' : vote.vote === 'No' ? '❌' : '⚪';
     const voteText = `${voteEmoji}${vote.vote}`;
 
@@ -93,7 +94,16 @@ function generateMarkdown(vote, proposalDetails, metadata) {
     // Get proposal type
     const proposalType = proposal.proposal_type || 'Unknown';
 
-    const markdown = `| ${organizationName}      | Cardano Governance Actions                                                                                                              |
+    // Process rationale text to prevent table disruption
+    let rationale = metadata?.body?.comment || metadata?.body?.rationale || 'No rationale available';
+    rationale = rationale.replace(/\n/g, ' ');
+    rationale = rationale.replace(/\s+/g, ' ');
+    rationale = rationale.replace(/\|/g, '\\|');
+    if (rationale.length > 500) {
+        rationale = rationale.substring(0, 497) + '...';
+    }
+
+    return `| ${organizationName}      | Cardano Governance Actions                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Proposal Title | ${proposalTitle}                                                                                                   |
 | Hash           | ${vote.metaHash || 'N/A'}                                                                      |
@@ -103,10 +113,33 @@ function generateMarkdown(vote, proposalDetails, metadata) {
 | Expires Epoch  | ${expirationEpoch}                                                                                                                              |
 | Vote           | ${voteText}                                                                                                                                   |
 | Vote Submitted | ${submittedDate}                                                                                                                              |
-| Rational       | ${metadata?.body?.comment || metadata?.body?.rationale || 'No rationale available'} |
-|Link|https://adastat.net/transactions/${vote.proposalTxHash || 'N/A'}`;
+| Rational       | ${rationale} |
+|Link|https://adastat.net/transactions/${vote.proposalTxHash || 'N/A'} |`;
+}
 
-    return markdown;
+// Function to generate yearly markdown file
+function generateYearlyMarkdown(votes, year) {
+    const yearDir = path.join(votingHistoryDir, year.toString());
+    if (!fs.existsSync(yearDir)) {
+        fs.mkdirSync(yearDir, { recursive: true });
+    }
+
+    const yearFile = path.join(yearDir, `${year}-votes.md`);
+    let content = `# DRep Voting History for ${year}\n\n`;
+
+    // Sort votes by submission date
+    votes.sort((a, b) => new Date(b.blockTime) - new Date(a.blockTime));
+
+    // Add each vote table with a separator
+    votes.forEach((vote, index) => {
+        if (index > 0) {
+            content += '\n\n---\n\n'; // Add separator between votes
+        }
+        content += vote.table + '\n';
+    });
+
+    fs.writeFileSync(yearFile, content);
+    console.log(`Generated yearly markdown file: ${year}-votes.md`);
 }
 
 async function getDRepVotes(drepId) {
@@ -130,6 +163,9 @@ async function getDRepVotes(drepId) {
         if (!Array.isArray(response.data)) {
             throw new Error('Invalid response format: expected an array');
         }
+
+        // Group votes by year
+        const votesByYear = {};
 
         // Process and validate each vote
         for (const vote of response.data) {
@@ -163,17 +199,25 @@ async function getDRepVotes(drepId) {
                 metadata = await fetchMetadata(processedVote.metaUrl);
             }
 
-            // Generate markdown
-            const markdown = generateMarkdown(processedVote, proposalDetails, metadata);
+            // Generate vote table
+            processedVote.table = generateVoteTable(processedVote, proposalDetails, metadata);
 
-            // Save markdown file
-            const fileName = `${processedVote.proposalId}.md`;
-            const filePath = path.join(votingHistoryDir, fileName);
-            fs.writeFileSync(filePath, markdown);
-            console.log(`Generated markdown file: ${fileName}`);
+            // Get year from blockTime
+            const year = new Date(processedVote.blockTime).getFullYear();
+
+            // Add to year group
+            if (!votesByYear[year]) {
+                votesByYear[year] = [];
+            }
+            votesByYear[year].push(processedVote);
         }
 
-        console.log('All votes processed successfully');
+        // Generate markdown files for each year
+        for (const [year, votes] of Object.entries(votesByYear)) {
+            generateYearlyMarkdown(votes, parseInt(year));
+        }
+
+        console.log('All votes processed and organized by year successfully');
     } catch (error) {
         console.error('Error fetching DRep votes:', error.message);
         if (error.response) {
