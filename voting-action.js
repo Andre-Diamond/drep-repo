@@ -184,7 +184,7 @@ async function getDRepVotes(drepId) {
 
             const processedVote = {
                 proposalId: vote.proposal_id,
-                proposalTxHash: vote.proposal_tx_hash,
+                proposalTxHash: vote.proposal_tx_hash + '00',
                 proposalIndex: vote.proposal_index,
                 voteTxHash: vote.vote_tx_hash,
                 blockTime: new Date(vote.block_time * 1000).toISOString(),
