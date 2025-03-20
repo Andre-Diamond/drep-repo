@@ -106,7 +106,7 @@ function generateVoteTable(vote, proposalDetails, metadata) {
     return `| ${organizationName}      | Cardano Governance Actions                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Proposal Title | ${proposalTitle}                                                                                                   |
-| Hash           | ${vote.metaHash || 'N/A'}                                                                      |
+| Hash           | ${vote.proposalTxHash || 'N/A'}                                                                      |
 | Action ID      | ${vote.proposalId || 'N/A'}                                                                  |
 | Type           | ${proposalType}                                                                                                                        |
 | Proposed Epoch | ${proposedEpoch}                                                                                                                              |
@@ -114,7 +114,7 @@ function generateVoteTable(vote, proposalDetails, metadata) {
 | Vote           | ${voteText}                                                                                                                                   |
 | Vote Submitted | ${submittedDate}                                                                                                                              |
 | Rational       | ${rationale} |
-|Link|https://adastat.net/transactions/${vote.proposalTxHash || 'N/A'} |`;
+|Link|https://adastat.net/transactions/${vote.voteTxHash || 'N/A'} |`;
 }
 
 // Function to generate yearly markdown file
