@@ -105,7 +105,7 @@ function generateVoteTable(vote, proposalDetails, metadata) {
 
     return `| ${organizationName}      | Cardano Governance Actions                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Proposal Title | ${proposalTitle}                                                                                                   |
+| Proposal Title | [${proposalTitle}](https://adastat.net/governances/${vote.proposalTxHash || 'N/A'})                                                                                                   |
 | Hash           | ${vote.proposalTxHash || 'N/A'}                                                                      |
 | Action ID      | ${vote.proposalId || 'N/A'}                                                                  |
 | Type           | ${proposalType}                                                                                                                        |
