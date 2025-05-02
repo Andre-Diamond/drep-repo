@@ -2,6 +2,22 @@
 
 | A Diamond      | Cardano Governance Actions                                                                                                              |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Proposal Title | [2025 Cardano NCL](https://adastat.net/governances/7d9fc9fe4cee64fb34e57783378ac869a85c78d6fbcd4078ed131ab6fa3c7db600)                                                                                                   |
+| Hash           | 7d9fc9fe4cee64fb34e57783378ac869a85c78d6fbcd4078ed131ab6fa3c7db600                                                                      |
+| Action ID      | gov_action10k0unljvaej0kd89w7pn0zkgdx59c7xkl0x5q78dzvdtd73u0kmqq5xl5y5                                                                  |
+| Type           | InfoAction                                                                                                                        |
+| Proposed Epoch | 554                                                                                                                              |
+| Expires Epoch  | 561                                                                                                                              |
+| Vote           | ✅Yes                                                                                                                                   |
+| Vote Submitted | 5/1/2025                                                                                                                              |
+| Rational       | Very much agree with continuing to grow the treasury, especially in these early governance stages. 200 million is more than enough for a start |
+|Link|https://adastat.net/transactions/45771290389f42c30f62f7e19e5fd10ad71ffdd9f7cd2dc8ad168b474256914b |
+
+
+---
+
+| A Diamond      | Cardano Governance Actions                                                                                                              |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Proposal Title | [2025 Net Change Limit](https://adastat.net/governances/9b62b3c632f329016a968ac25211825bb4f84b12461121c7da3aa11df92370f900)                                                                                                   |
 | Hash           | 9b62b3c632f329016a968ac25211825bb4f84b12461121c7da3aa11df92370f900                                                                      |
 | Action ID      | gov_action1nd3t833j7v5sz65k3tp9yyvztw60sjcjgcgjr37682s3m7frwrusqmd2k80                                                                  |
